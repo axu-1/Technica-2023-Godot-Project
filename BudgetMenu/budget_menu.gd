@@ -24,10 +24,8 @@ func _on_rent_slider_value_changed(value):
 func _on_emergency_slider_value_changed(value):
 	emergency_num.text = value
 
-
 func _on_leisure_slider_value_changed(value):
-	pass # Replace with function body.
-
+	leisure_num.text = value
 
 func _on_utlities_slider_value_changed(value):
-	pass # Replace with function body.
+	utilities_num.text = value

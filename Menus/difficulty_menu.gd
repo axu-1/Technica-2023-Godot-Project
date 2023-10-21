@@ -12,9 +12,9 @@ func _process(delta):
 	pass
 	
 func _on_easy_button_pressed():
-	Game.difficulty = 0
+	Game.difficulty_lvl = 0
 	Game.emit_signal("goto_scene", budget_menu)
 	
 func _on_hard_button_pressed():
-	Game.difficulty = 1
+	Game.difficulty_lvl = 1
 	Game.emit_signal("goto_scene", budget_menu)

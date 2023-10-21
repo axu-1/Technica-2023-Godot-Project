@@ -21,6 +21,7 @@ func _process(delta):
 
 #PLAYER VARIABLES
 enum difficulty {EASY, HARD}
+var difficulty_lvl
 
 var total_money
 var food
@@ -28,4 +29,5 @@ var rent
 var emergency
 var leisure
 var utilities
+
 
