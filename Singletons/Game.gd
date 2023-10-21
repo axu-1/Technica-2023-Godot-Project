@@ -26,9 +26,12 @@ var difficulty_lvl
 var total_money
 var food
 var rent
-var emergency
+var insurance
 var leisure
 var utilities
+var transit
+
+var savings
 
 var income
 var happiness

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dpufl0l80m4io"]
+[gd_scene load_steps=3 format=3 uid="uid://dpufl0l80m4io"]
 
 [ext_resource type="Script" path="res://BudgetMenu/budget_menu.gd" id="1_1tv5o"]
+[ext_resource type="Texture2D" uid="uid://blrbi7bpvsoyg" path="res://BudgetMenu/bread.png" id="2_5k5h5"]
 
 [node name="BudgetMenu" type="CanvasLayer"]
 script = ExtResource("1_1tv5o")
@@ -10,9 +11,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 32.0
-offset_top = 32.0
+offset_top = -9.0
 offset_right = -32.0
-offset_bottom = -25.0
+offset_bottom = 17.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1, 1.00245)
@@ -45,41 +46,63 @@ size_flags_vertical = 3
 [node name="LeftSeparator" type="VSeparator" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.5
+size_flags_stretch_ratio = 0.25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer"]
+layout_mode = 2
+
+[node name="RentRect" type="TextureRect" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_5k5h5")
 
 [node name="CategoryVBoxContainer" type="VBoxContainer" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-
-[node name="Food" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/CategoryVBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Food"
 
 [node name="Rent" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/CategoryVBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Rent"
 
-[node name="Emergency" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/CategoryVBoxContainer"]
+[node name="Food" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/CategoryVBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-text = "Emergency"
+text = "Food"
 
-[node name="Leisure" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/CategoryVBoxContainer"]
+[node name="Transit" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/CategoryVBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
-text = "Leisure"
+text = "Transit"
 
 [node name="Utilities" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/CategoryVBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Utilities"
 
+[node name="Insurance" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/CategoryVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Insurance
+"
+
+[node name="Leisure" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/CategoryVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Leisure"
+
+[node name="Savings" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/CategoryVBoxContainer"]
+layout_mode = 2
+text = "Savings"
+
 [node name="NumberVBoxContainer" type="VBoxContainer" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.75
+
+[node name="RentNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+text = "$0"
 
 [node name="FoodNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
 unique_name_in_owner = true
@@ -87,10 +110,9 @@ layout_mode = 2
 size_flags_vertical = 3
 text = "$0"
 
-[node name="RentNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
+[node name="TransitNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_vertical = 3
 text = "$0"
 
 [node name="UtilitiesNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
@@ -99,7 +121,7 @@ layout_mode = 2
 size_flags_vertical = 3
 text = "$0"
 
-[node name="EmergencyNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
+[node name="InsuranceNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -111,23 +133,31 @@ layout_mode = 2
 size_flags_vertical = 3
 text = "$0"
 
+[node name="SavingsNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "$0"
+
 [node name="SliderVBoxContainer" type="VBoxContainer" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-
-[node name="FoodSlider" type="HSlider" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
 
 [node name="RentSlider" type="HSlider" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
+[node name="FoodSlider" type="HSlider" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TransitSlider" type="HSlider" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer"]
+layout_mode = 2
+
 [node name="UtlitiesSlider" type="HSlider" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="EmergencySlider" type="HSlider" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer"]
+[node name="InsuranceSlider" type="HSlider" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
@@ -135,10 +165,15 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_vertical = 3
 
+[node name="SavingsSlider" type="HSlider" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer"]
+layout_mode = 2
+editable = false
+scrollable = false
+
 [node name="RightSeparator" type="VSeparator" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.5
+size_flags_stretch_ratio = 0.25
 
 [node name="HSeparator" type="HSeparator" parent="BackgroundPanelContainer/VBoxContainer"]
 layout_mode = 2
@@ -159,8 +194,10 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Home"
 
-[connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/FoodSlider" to="." method="_on_food_slider_value_changed"]
 [connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/RentSlider" to="." method="_on_rent_slider_value_changed"]
+[connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/FoodSlider" to="." method="_on_food_slider_value_changed"]
+[connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/TransitSlider" to="." method="_on_transit_slider_value_changed"]
 [connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/UtlitiesSlider" to="." method="_on_utlities_slider_value_changed"]
-[connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/EmergencySlider" to="." method="_on_emergency_slider_value_changed"]
+[connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/InsuranceSlider" to="." method="_on_emergency_slider_value_changed"]
 [connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/LeisureSlider" to="." method="_on_leisure_slider_value_changed"]
+[connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/SavingsSlider" to="." method="_on_savings_slider_value_changed"]
