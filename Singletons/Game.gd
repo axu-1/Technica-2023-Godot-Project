@@ -19,3 +19,13 @@ func _process(delta):
 	if seconds_decimal < 0:
 		seconds_decimal = 1.0
 
+#PLAYER VARIABLES
+enum difficulty {EASY, HARD}
+
+var total_money
+var food
+var rent
+var emergency
+var leisure
+var utilities
+

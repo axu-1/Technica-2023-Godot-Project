@@ -72,26 +72,31 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.75
 
 [node name="FoodNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 text = "0"
 
 [node name="RentNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 text = "0"
 
 [node name="EmergencyNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 text = "0"
 
 [node name="LeisureNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 text = "0"
 
 [node name="UtilitiesNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 text = "0"
@@ -129,3 +134,9 @@ size_flags_stretch_ratio = 0.5
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
+
+[connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/FoodSlider" to="." method="_on_food_slider_value_changed"]
+[connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/RentSlider" to="." method="_on_rent_slider_value_changed"]
+[connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/EmergencySlider" to="." method="_on_emergency_slider_value_changed"]
+[connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/LeisureSlider" to="." method="_on_leisure_slider_value_changed"]
+[connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/UtlitiesSlider" to="." method="_on_utlities_slider_value_changed"]
