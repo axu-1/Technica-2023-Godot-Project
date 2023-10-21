@@ -10,12 +10,12 @@ extends CanvasLayer
 @onready var savings_num = $%SavingsNum
 
 @onready var rent_slider = $%RentSlider
-@onready var food_slider = $%RentSlider
-@onready var transit_slider = $%RentSlider
-@onready var utilities_slider = $%RentSlider
-@onready var insurance_slider = $%RentSlider
-@onready var leisure_slider = $%RentSlider
-@onready var savings_slider = $%RentSlider
+@onready var food_slider = $%FoodSlider
+@onready var transit_slider = $%TransitSlider
+@onready var utilities_slider = $%UtilitiesSlider
+@onready var insurance_slider = $%InsuranceSlider
+@onready var leisure_slider = $%LeisureSlider
+@onready var savings_slider = $%SavingsSlider
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
