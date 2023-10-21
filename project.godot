@@ -13,7 +13,6 @@ config_version=5
 config/name="Technica 2023"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
-config/icon="res://icon.svg"
 
 [autoload]
 
@@ -23,6 +22,7 @@ Game="*res://Singletons/Game.gd"
 
 window/size/viewport_width=640
 window/size/viewport_height=360
+window/stretch/mode="viewport"
 
 [rendering]
 

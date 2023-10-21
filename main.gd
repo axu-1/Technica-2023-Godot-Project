@@ -7,7 +7,6 @@ var current_level # as scene
 var current_level_path # as NodePath in string form
 
 func _ready():
-	
 	# Instances starting scene at position 1
 	current_level = start_scene.instantiate()
 	add_child(current_level)

@@ -1,6 +1,11 @@
-[gd_scene format=3 uid="uid://d2rqcql5ks5rj"]
+[gd_scene load_steps=3 format=3 uid="uid://d2rqcql5ks5rj"]
+
+[ext_resource type="Script" path="res://Menus/main_menu.gd" id="1_rnb2a"]
+[ext_resource type="PackedScene" uid="uid://dpufl0l80m4io" path="res://BudgetMenu/budget_menu.tscn" id="2_e4nyk"]
 
 [node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_rnb2a")
+budget_menu = ExtResource("2_e4nyk")
 
 [node name="StartButton" type="Button" parent="."]
 offset_left = 201.0
@@ -34,3 +39,5 @@ survive finance
 -emma
 "
 horizontal_alignment = 1
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]

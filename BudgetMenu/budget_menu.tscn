@@ -1,15 +1,11 @@
-[gd_scene format=3 uid="uid://dpufl0l80m4io"]
+[gd_scene load_steps=2 format=3 uid="uid://dpufl0l80m4io"]
 
-[node name="BudgetMenu" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[ext_resource type="Script" path="res://BudgetMenu/budget_menu.gd" id="1_1tv5o"]
+
+[node name="BudgetMenu" type="CanvasLayer"]
+script = ExtResource("1_1tv5o")
 
 [node name="BackgroundPanelContainer" type="PanelContainer" parent="."]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -26,7 +22,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="BackgroundPanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.25
+size_flags_stretch_ratio = 0.5
 theme_override_font_sizes/font_size = 32
 text = "Budget"
 horizontal_alignment = 1
@@ -69,6 +65,36 @@ text = "Leisure"
 layout_mode = 2
 size_flags_vertical = 3
 text = "Utilities"
+
+[node name="NumberVBoxContainer" type="VBoxContainer" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.75
+
+[node name="FoodNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "0"
+
+[node name="RentNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "0"
+
+[node name="EmergencyNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "0"
+
+[node name="LeisureNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "0"
+
+[node name="UtilitiesNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "0"
 
 [node name="SliderVBoxContainer" type="VBoxContainer" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer"]
 layout_mode = 2
