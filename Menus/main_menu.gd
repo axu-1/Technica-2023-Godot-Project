@@ -1,6 +1,7 @@
 extends CanvasLayer
 
-@export var budget_menu : PackedScene
+
+@export var difficulty_menu : PackedScene
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -10,4 +11,4 @@ func _process(delta):
 	pass
 
 func _on_start_button_pressed():
-	Game.emit_signal("goto_scene", budget_menu)
+	Game.emit_signal("goto_scene", difficulty_menu)

@@ -1,11 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2rqcql5ks5rj"]
+[gd_scene load_steps=2 format=3 uid="uid://d2rqcql5ks5rj"]
 
 [ext_resource type="Script" path="res://Menus/main_menu.gd" id="1_rnb2a"]
-[ext_resource type="PackedScene" uid="uid://dpufl0l80m4io" path="res://BudgetMenu/budget_menu.tscn" id="2_e4nyk"]
 
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource("1_rnb2a")
-budget_menu = ExtResource("2_e4nyk")
 
 [node name="StartButton" type="Button" parent="."]
 offset_left = 201.0
@@ -33,11 +31,8 @@ offset_right = 226.0
 offset_bottom = -51.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Budget something something expense something something
--cup 2023
-survive finance
--emma
-"
+theme_override_font_sizes/font_size = 50
+text = "Budgeting 101"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]

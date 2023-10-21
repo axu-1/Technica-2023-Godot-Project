@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqm7gy15epovj"]
+
+[ext_resource type="Script" path="res://Menus/difficulty_menu.gd" id="1_rkuv8"]
+
+[node name="Difficulty" type="Node2D"]
+script = ExtResource("1_rkuv8")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 60.0
+offset_top = 34.0
+offset_right = 575.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 50
+text = "Select Difficulty Level"
+
+[node name="EasyButton" type="Button" parent="."]
+offset_left = 231.0
+offset_top = 152.0
+offset_right = 444.0
+offset_bottom = 191.0
+text = "Easy: Trust Fund Baby"
+
+[node name="HardButton" type="Button" parent="."]
+offset_left = 196.0
+offset_top = 228.0
+offset_right = 485.0
+offset_bottom = 267.0
+text = "Hard: College Student with Debt"
