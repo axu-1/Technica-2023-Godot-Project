@@ -1,11 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dpufl0l80m4io"]
+[gd_scene load_steps=2 format=3 uid="uid://dpufl0l80m4io"]
 
 [ext_resource type="Script" path="res://BudgetMenu/budget_menu.gd" id="1_1tv5o"]
-[ext_resource type="PackedScene" uid="uid://d2rqcql5ks5rj" path="res://Menus/main_menu.tscn" id="2_v877r"]
 
 [node name="BudgetMenu" type="CanvasLayer"]
 script = ExtResource("1_1tv5o")
-main_menu = ExtResource("2_v877r")
 
 [node name="BackgroundPanelContainer" type="PanelContainer" parent="."]
 anchors_preset = 15
@@ -166,4 +164,3 @@ text = "Home"
 [connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/UtlitiesSlider" to="." method="_on_utlities_slider_value_changed"]
 [connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/EmergencySlider" to="." method="_on_emergency_slider_value_changed"]
 [connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/LeisureSlider" to="." method="_on_leisure_slider_value_changed"]
-[connection signal="pressed" from="HomeButton" to="." method="_on_home_button_pressed"]

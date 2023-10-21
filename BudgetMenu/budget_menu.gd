@@ -1,7 +1,5 @@
 extends CanvasLayer
 
-@export var main_menu : PackedScene
-
 @onready var food_num = $%FoodNum
 @onready var rent_num = $%RentNum
 @onready var emergency_num = $%EmergencyNum
@@ -40,6 +38,3 @@ func set_stats():
 			Game.income = 10000
 		Game.difficulty.HARD:
 			Game.income = 5000
-
-func _on_home_button_pressed():
-	Game.emit_signal("goto_scene", main_menu)
