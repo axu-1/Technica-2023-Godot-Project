@@ -30,4 +30,6 @@ var emergency
 var leisure
 var utilities
 
+var income
+var happiness
 

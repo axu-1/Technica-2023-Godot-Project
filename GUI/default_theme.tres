@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cc470lqkt6bcr"]
+
+[ext_resource type="FontFile" uid="uid://b71cv8gqsb67l" path="res://GUI/pixelmix.ttf" id="1_bmi2o"]
+
+[resource]
+default_font = ExtResource("1_bmi2o")
+default_font_size = 12

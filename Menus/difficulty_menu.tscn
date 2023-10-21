@@ -1,28 +1,33 @@
-[gd_scene load_steps=2 format=3 uid="uid://cqm7gy15epovj"]
+[gd_scene load_steps=3 format=3 uid="uid://bplu7ldec7j8c"]
 
 [ext_resource type="Script" path="res://Menus/difficulty_menu.gd" id="1_rkuv8"]
+[ext_resource type="PackedScene" uid="uid://dpufl0l80m4io" path="res://BudgetMenu/budget_menu.tscn" id="2_1qkuv"]
 
 [node name="Difficulty" type="Node2D"]
 script = ExtResource("1_rkuv8")
+budget_menu = ExtResource("2_1qkuv")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 60.0
-offset_top = 34.0
-offset_right = 575.0
-offset_bottom = 106.0
-theme_override_font_sizes/font_size = 50
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 304.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 18
 text = "Select Difficulty Level"
 
 [node name="EasyButton" type="Button" parent="."]
-offset_left = 231.0
-offset_top = 152.0
-offset_right = 444.0
-offset_bottom = 191.0
+offset_left = 48.0
+offset_top = 64.0
+offset_right = 261.0
+offset_bottom = 103.0
 text = "Easy: Trust Fund Baby"
 
 [node name="HardButton" type="Button" parent="."]
-offset_left = 196.0
-offset_top = 228.0
-offset_right = 485.0
-offset_bottom = 267.0
+offset_left = 32.0
+offset_top = 128.0
+offset_right = 298.0
+offset_bottom = 167.0
 text = "Hard: College Student with Debt"
+
+[connection signal="pressed" from="EasyButton" to="." method="_on_easy_button_pressed"]
+[connection signal="pressed" from="HardButton" to="." method="_on_hard_button_pressed"]
