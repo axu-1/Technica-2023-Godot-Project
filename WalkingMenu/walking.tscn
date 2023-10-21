@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c3q41svgch3hy"]
+
+[node name="WalkingMenu" type="Node2D"]
+
+[node name="Background" type="AnimatedSprite2D" parent="."]
+
+[node name="Character" type="AnimatedSprite2D" parent="."]

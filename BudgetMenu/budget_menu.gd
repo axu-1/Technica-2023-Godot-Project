@@ -1,12 +1,21 @@
 extends CanvasLayer
 
+@onready var income_num = $%IncomeNum
 @onready var rent_num = $%RentNum
 @onready var food_num = $%FoodNum
 @onready var transit_num = $%TransitNum
 @onready var insurance_num = $%InsuranceyNum
 @onready var leisure_num = $%LeisureNum
 @onready var utilities_num = $%UtilitiesNum
-@onready var income_num = $%IncomeLabel
+@onready var savings_num = $%SavingsNum
+
+@onready var rent_slider = $%RentSlider
+@onready var food_slider = $%RentSlider
+@onready var transit_slider = $%RentSlider
+@onready var utilities_slider = $%RentSlider
+@onready var insurance_slider = $%RentSlider
+@onready var leisure_slider = $%RentSlider
+@onready var savings_slider = $%RentSlider
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -38,7 +47,8 @@ func _on_transit_slider_value_changed(value):
 	Game.transit = value
 
 func _on_savings_slider_value_changed(value):
-	pass # Replace with function body.
+	savings_num.text = "$" + str(value)
+	Game.savings = value
 
 func set_stats():
 	match Game.difficulty_lvl:
@@ -46,3 +56,4 @@ func set_stats():
 			Game.income = 10000
 		Game.difficulty.HARD:
 			Game.income = 5000
+
