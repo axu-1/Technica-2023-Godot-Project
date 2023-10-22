@@ -1,30 +1,26 @@
-[gd_scene load_steps=6 format=3 uid="uid://c3q41svgch3hy"]
+[gd_scene load_steps=6 format=3 uid="uid://d3aho76al3rat"]
 
 [ext_resource type="Script" path="res://WalkingMenu/walking.gd" id="1_wfwps"]
 [ext_resource type="PackedScene" uid="uid://c5tmg7pv47da6" path="res://Events/event_displayer.tscn" id="2_lygco"]
 [ext_resource type="PackedScene" uid="uid://dw2amx6egqxes" path="res://Events/event_option.tscn" id="3_ulii0"]
-[ext_resource type="PackedScene" uid="uid://dpufl0l80m4io" path="res://BudgetMenu/budget_menu.tscn" id="4_xlya6"]
-[ext_resource type="PackedScene" uid="uid://csfj2cre1jsir" path="res://Menus/game_over.tscn" id="5_bgd6e"]
+[ext_resource type="PackedScene" uid="uid://dpufl0l80m4io" path="res://BudgetMenu/budget_menu.tscn" id="4_n1bqf"]
+[ext_resource type="PackedScene" uid="uid://csfj2cre1jsir" path="res://Menus/game_over.tscn" id="5_8bt44"]
 
-[node name="WalkingMenu" type="Node2D"]
+[node name="walking" type="Node2D"]
 script = ExtResource("1_wfwps")
 event_displayer = ExtResource("2_lygco")
 event_option = ExtResource("3_ulii0")
-budget_menu = ExtResource("4_xlya6")
-game_over = ExtResource("5_bgd6e")
-
-[node name="Background" type="AnimatedSprite2D" parent="."]
-
-[node name="Character" type="AnimatedSprite2D" parent="."]
-
-[node name="Label" type="Label" parent="."]
-offset_left = 144.0
-offset_top = 66.0
-offset_right = 184.0
-offset_bottom = 74.0
-text = "Walking"
+budget_menu = ExtResource("4_n1bqf")
+game_over = ExtResource("5_8bt44")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 130.0
+offset_top = 118.0
+offset_right = 170.0
+offset_bottom = 126.0
+text = "walk"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -61,7 +61,7 @@ func _on_timer_timeout():
 		new_event_option.event_type = event_order[e_index]
 		e_index += 1
 #		event_done = false
-		#Game.emit_signal("on_event_closed")
+		Game.emit_signal("on_event_closed")
 
 func on_event_closed():
 	timer.start()
