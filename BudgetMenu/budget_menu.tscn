@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dpufl0l80m4io"]
+[gd_scene load_steps=4 format=3 uid="uid://dpufl0l80m4io"]
 
 [ext_resource type="Script" path="res://BudgetMenu/budget_menu.gd" id="1_1tv5o"]
 [ext_resource type="Texture2D" uid="uid://blrbi7bpvsoyg" path="res://BudgetMenu/bread.png" id="2_5k5h5"]
+[ext_resource type="Texture2D" uid="uid://cqr1kj2f84xr4" path="res://BudgetMenu/coin.png" id="2_yqkxs"]
 
 [node name="BudgetMenu" type="CanvasLayer"]
 script = ExtResource("1_1tv5o")
@@ -10,30 +11,34 @@ script = ExtResource("1_1tv5o")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 32.0
-offset_top = -9.0
-offset_right = -32.0
-offset_bottom = 17.0
+offset_bottom = 11.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1, 1.00245)
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="BackgroundPanelContainer"]
 layout_mode = 2
 
-[node name="BudgetLabel" type="Label" parent="BackgroundPanelContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="BackgroundPanelContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.5
-theme_override_font_sizes/font_size = 24
-text = "BUDGET"
+size_flags_vertical = 4
+
+[node name="BudgetLabel" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+theme_override_font_sizes/font_size = 16
+text = "  BUDGET"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="IncomeLabel" type="Label" parent="BackgroundPanelContainer/VBoxContainer"]
+[node name="IncomeLabel" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_font_sizes/font_size = 12
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 8
 text = "Income: $0.00
 "
 horizontal_alignment = 1
@@ -43,17 +48,43 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="LeftSeparator" type="VSeparator" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.25
-
 [node name="VBoxContainer" type="VBoxContainer" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer"]
 layout_mode = 2
 
 [node name="RentRect" type="TextureRect" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 6
+texture = ExtResource("2_yqkxs")
+
+[node name="FoodRect" type="TextureRect" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
 texture = ExtResource("2_5k5h5")
+
+[node name="TransitRect" type="TextureRect" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+texture = ExtResource("2_yqkxs")
+
+[node name="UtilitiesRect" type="TextureRect" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+texture = ExtResource("2_yqkxs")
+
+[node name="InsuranceRect" type="TextureRect" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+texture = ExtResource("2_yqkxs")
+
+[node name="LeisureRect" type="TextureRect" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+texture = ExtResource("2_yqkxs")
+
+[node name="SavingsRect" type="TextureRect" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+texture = ExtResource("2_yqkxs")
 
 [node name="CategoryVBoxContainer" type="VBoxContainer" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer"]
 layout_mode = 2
@@ -63,80 +94,98 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_vertical = 3
 text = "Rent"
+vertical_alignment = 1
 
 [node name="Food" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/CategoryVBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Food"
+vertical_alignment = 1
 
 [node name="Transit" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/CategoryVBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 text = "Transit"
+vertical_alignment = 1
 
 [node name="Utilities" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/CategoryVBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Utilities"
+vertical_alignment = 1
 
 [node name="Insurance" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/CategoryVBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Insurance
 "
+vertical_alignment = 1
 
 [node name="Leisure" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/CategoryVBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Leisure"
+vertical_alignment = 1
 
 [node name="Savings" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/CategoryVBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 text = "Savings"
+vertical_alignment = 1
 
 [node name="NumberVBoxContainer" type="VBoxContainer" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.75
+size_flags_stretch_ratio = 0.8
 
 [node name="RentNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 text = "$0"
+vertical_alignment = 1
 
 [node name="FoodNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 text = "$0"
+vertical_alignment = 1
 
 [node name="TransitNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_vertical = 3
 text = "$0"
+vertical_alignment = 1
 
 [node name="UtilitiesNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 text = "$0"
+vertical_alignment = 1
 
 [node name="InsuranceNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 text = "$0"
+vertical_alignment = 1
 
 [node name="LeisureNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 text = "$0"
+vertical_alignment = 1
 
 [node name="SavingsNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_vertical = 3
 text = "$0"
+vertical_alignment = 1
 
 [node name="SliderVBoxContainer" type="VBoxContainer" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer"]
 layout_mode = 2
@@ -156,7 +205,7 @@ size_flags_vertical = 3
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="UtlitiesSlider" type="HSlider" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer"]
+[node name="UtilitiesSlider" type="HSlider" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -177,34 +226,10 @@ layout_mode = 2
 editable = false
 scrollable = false
 
-[node name="RightSeparator" type="VSeparator" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.25
-
-[node name="HSeparator" type="HSeparator" parent="BackgroundPanelContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.25
-
-[node name="HomeButton" type="Button" parent="."]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -112.0
-offset_top = -148.0
-offset_right = -64.0
-offset_bottom = -128.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "Home"
-
 [connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/RentSlider" to="." method="_on_rent_slider_value_changed"]
 [connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/FoodSlider" to="." method="_on_food_slider_value_changed"]
 [connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/TransitSlider" to="." method="_on_transit_slider_value_changed"]
-[connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/UtlitiesSlider" to="." method="_on_utlities_slider_value_changed"]
-[connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/InsuranceSlider" to="." method="_on_emergency_slider_value_changed"]
+[connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/UtilitiesSlider" to="." method="_on_utlities_slider_value_changed"]
+[connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/InsuranceSlider" to="." method="_on_insurance_slider_value_changed"]
 [connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/LeisureSlider" to="." method="_on_leisure_slider_value_changed"]
 [connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/SavingsSlider" to="." method="_on_savings_slider_value_changed"]

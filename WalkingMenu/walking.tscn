@@ -1,6 +1,11 @@
-[gd_scene format=3 uid="uid://c3q41svgch3hy"]
+[gd_scene load_steps=3 format=3 uid="uid://c3q41svgch3hy"]
+
+[ext_resource type="Script" path="res://WalkingMenu/walking.gd" id="1_wfwps"]
+[ext_resource type="PackedScene" uid="uid://c5tmg7pv47da6" path="res://Events/event_displayer.tscn" id="2_lygco"]
 
 [node name="WalkingMenu" type="Node2D"]
+script = ExtResource("1_wfwps")
+event_displayer = ExtResource("2_lygco")
 
 [node name="Background" type="AnimatedSprite2D" parent="."]
 

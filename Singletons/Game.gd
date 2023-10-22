@@ -23,16 +23,18 @@ func _process(delta):
 enum difficulty {EASY, HARD}
 var difficulty_lvl
 
-var total_money
-var food
-var rent
-var insurance
-var leisure
-var utilities
-var transit
+var total_money = 0
+var total_spent = 0
+var food = 0
+var rent = 0
+var insurance = 0
+var leisure = 0
+var utilities = 0
+var transit = 0
 
-var savings
+var savings = 0
 
-var income
-var happiness
+var income = 0
+var happiness = 0
+
 

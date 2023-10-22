@@ -29,6 +29,7 @@ window/stretch/mode="viewport"
 [gui]
 
 theme/custom="res://GUI/default_theme.tres"
+theme/default_font_antialiasing=0
 
 [rendering]
 
