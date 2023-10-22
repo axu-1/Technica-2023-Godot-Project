@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://ciajgvgirgoas"]
+
+[ext_resource type="Script" path="res://Events/rent.gd" id="1_8xu8v"]
+
+[resource]
+script = ExtResource("1_8xu8v")
+title = ""
+description = ""
+cost = 0

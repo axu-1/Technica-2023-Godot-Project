@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://dw2amx6egqxes"]
+
+[ext_resource type="Script" path="res://Events/event_option.gd" id="1_561w0"]
+
+[node name="event_option" type="Node2D"]
+script = ExtResource("1_561w0")
+
+[node name="Title" type="Label" parent="."]
+offset_left = 127.0
+offset_top = 17.0
+offset_right = 167.0
+offset_bottom = 29.0
+
+[node name="Description" type="Label" parent="."]
+offset_left = 67.0
+offset_top = 65.0
+offset_right = 272.0
+offset_bottom = 95.0
+autowrap_mode = 3
+
+[node name="Option1" type="Button" parent="."]
+offset_left = 70.0
+offset_top = 135.0
+offset_right = 134.0
+offset_bottom = 155.0
+text = "Option 1"
+
+[node name="Option2" type="Button" parent="Option1"]
+offset_left = 123.0
+offset_top = -1.0
+offset_right = 187.0
+offset_bottom = 19.0
+text = "Option 2"
