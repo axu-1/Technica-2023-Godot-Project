@@ -13,25 +13,22 @@ var cost2: int
 func _init(p_title = "", p_description = "", p_cost1 = 0, p_cost2 = 0):
 	var rand_int = randi_range(0, 3)
 	if rand_int == 0:
-		title = "Netflix"
+		title = "Greenlit"
 		description = "You love watching movies, but are you willing to pay the price?"
 		cost1 = 0
 		cost2 = 30
 	elif rand_int == 1:
-		title = "Trip Time!"
+		title = "Where the Magic Happens!"
 		description = "Your friends want to go on a trip to Disneyland. Will you join them?"
 		cost1 = 0
 		cost2 = 500
 	elif rand_int == 2:
-		title = "Movies"
+		title = "I am Kenough?"
 		description = "Your friends wanna go see the new Barbie movie. Will you join them?"
 		cost1 = 0
-		cost2 = 10
+		cost2 = 18
 	elif rand_int == 3:
-		title = "Dinner"
+		title = "Bon Appetit!"
 		description = "Your friends wanna go out for dinner. Will you join them?"
 		cost1 = 0
 		cost2 = 20
-	
-
-
