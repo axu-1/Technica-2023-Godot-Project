@@ -112,7 +112,8 @@ func calculate_balances():
 func _on_button_pressed():
 	if Game.savings < 0:
 #		Game.emit_signal("goto_scene", pop_up)
-		pass
+		var pop = pop_up.instantiate()
+		add_child(pop)
 	else:
 		Game.emit_signal("goto_scene", walking)
 

@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Menus/pop_up.gd" id="1_dx2i0"]
 [ext_resource type="PackedScene" uid="uid://dpufl0l80m4io" path="res://BudgetMenu/budget_menu.tscn" id="2_co0fp"]
 
-[node name="pop_up" type="Node2D"]
+[node name="pop_up" type="CanvasLayer"]
 script = ExtResource("1_dx2i0")
 budget_menu = ExtResource("2_co0fp")
 

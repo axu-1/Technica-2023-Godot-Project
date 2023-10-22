@@ -24,6 +24,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+#Change lose condition to be dependent on if exceed budget
 	if Game.total_money < 0:
 		Game.emit_signal("goto_scene", game_over)
 	
@@ -59,10 +60,12 @@ func _process(delta):
 func _on_option_1_pressed():
 	cost = cost1
 	Game.total_money -= cost1
+	queue_free()
 #	Game.emit_signal("goto_scene", walking)
 	
 func _on_option_2_pressed():
 	cost = cost2
 	Game.total_money -= cost2
+	queue_free()
 #	Game.emit_signal("goto_scene", walking)
 

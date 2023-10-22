@@ -1,4 +1,4 @@
-extends Node
+extends CanvasLayer
 
 @export var budget_menu : PackedScene
 
@@ -6,10 +6,10 @@ extends Node
 func _ready():
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
 func _on_button_pressed():
-	Game.emit_signal("goto_scene", budget_menu)
+	queue_free()
+#	Game.emit_signal("goto_scene", budget_menu)

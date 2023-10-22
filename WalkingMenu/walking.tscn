@@ -12,3 +12,10 @@ event_option = ExtResource("3_ulii0")
 [node name="Background" type="AnimatedSprite2D" parent="."]
 
 [node name="Character" type="AnimatedSprite2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 126.0
+offset_top = 79.0
+offset_right = 166.0
+offset_bottom = 87.0
+text = "Walk"
