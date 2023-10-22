@@ -20,6 +20,8 @@ var budget_max : int
 var slider_dict
 var rent = 200
 
+@export var walking : PackedScene
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_stats()
@@ -94,4 +96,10 @@ func calculate_balances():
 	_on_savings_slider_value_changed(Game.savings)
 	savings_slider.value = Game.savings
 #if max money, set editable to false if moving to a greater position than currently
+
+func _on_button_pressed():
+	if Game.savings < 0:
+		pass #clickable popup
+	else:
+		Game.emit_signal("goto_scene", walking)
 

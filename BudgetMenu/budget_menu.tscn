@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dpufl0l80m4io"]
+[gd_scene load_steps=9 format=3 uid="uid://dpufl0l80m4io"]
 
 [ext_resource type="Script" path="res://BudgetMenu/budget_menu.gd" id="1_1tv5o"]
 [ext_resource type="Texture2D" uid="uid://blrbi7bpvsoyg" path="res://BudgetMenu/bread.png" id="2_5k5h5"]
+[ext_resource type="PackedScene" uid="uid://c3q41svgch3hy" path="res://WalkingMenu/walking.tscn" id="2_p0o7i"]
 [ext_resource type="Texture2D" uid="uid://bx2up05psfl7b" path="res://BudgetMenu/house.png" id="2_tnb7k"]
 [ext_resource type="Texture2D" uid="uid://cqr1kj2f84xr4" path="res://BudgetMenu/coin.png" id="2_yqkxs"]
 [ext_resource type="Texture2D" uid="uid://dwwcpujgl25me" path="res://BudgetMenu/car.png" id="4_k2h8h"]
@@ -10,6 +11,7 @@
 
 [node name="BudgetMenu" type="CanvasLayer"]
 script = ExtResource("1_1tv5o")
+walking = ExtResource("2_p0o7i")
 
 [node name="BackgroundPanelContainer" type="PanelContainer" parent="."]
 anchors_preset = 15
@@ -225,3 +227,4 @@ text = "Check"
 [connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/UtilitiesSlider" to="." method="_on_utlities_slider_value_changed"]
 [connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/LeisureSlider" to="." method="_on_leisure_slider_value_changed"]
 [connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/SavingsSlider" to="." method="_on_savings_slider_value_changed"]
+[connection signal="pressed" from="BackgroundPanelContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
