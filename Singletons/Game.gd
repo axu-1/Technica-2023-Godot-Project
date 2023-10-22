@@ -7,10 +7,9 @@ signal goto_scene(scene)
 signal restarted
 
 signal next_scene_triggered
-signal portal_entered
+#signal portal_entered
 
-signal player_killed(body)
-signal died
+signal game_over
 
 var seconds_decimal = 1.0
 
@@ -35,6 +34,7 @@ var transit = 0
 var savings = 0
 
 var income = 0
-var happiness = 0
+var happiness = 5 #min: 0 (dead), max: 10
+var month = 1 #month goes from 1 to 12
 
 

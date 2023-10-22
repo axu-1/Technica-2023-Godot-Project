@@ -32,4 +32,6 @@ func _on_goto_scene(scene):
 	
 #func _on_goto_map():
 	#SignalManager.emit_signal("goto_scene", map)
-	
+
+#func _on_game_over():
+#	Game.emit_signal("goto_scene", game_over)

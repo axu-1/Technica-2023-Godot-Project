@@ -30,3 +30,5 @@ offset_right = 224.0
 offset_bottom = 147.0
 text = "Continue"
 metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

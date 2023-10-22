@@ -1,5 +1,8 @@
 extends Node
 
+@export var walking : PackedScene
+@export var game_over : PackedScene
+
 @export var food: Resource
 @export var leisure: Resource
 @export var ac_heat: Resource
@@ -21,6 +24,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if Game.total_money < 0:
+		Game.emit_signal("goto_scene", game_over)
+	
 	if event_type == event_type_enum.FOOD:
 		title = food.title
 		description = food.description
@@ -49,14 +55,14 @@ func _process(delta):
 	
 	$Title.set_text(title)
 	$Description.set_text(description)
-	if Game.total_money < 0:
-		Game.emit_signal(Game.player_died)
 
 func _on_option_1_pressed():
 	cost = cost1
 	Game.total_money -= cost1
+#	Game.emit_signal("goto_scene", walking)
 	
 func _on_option_2_pressed():
 	cost = cost2
 	Game.total_money -= cost2
+#	Game.emit_signal("goto_scene", walking)
 
