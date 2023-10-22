@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://dpufl0l80m4io"]
+[gd_scene load_steps=8 format=3 uid="uid://dpufl0l80m4io"]
 
 [ext_resource type="Script" path="res://BudgetMenu/budget_menu.gd" id="1_1tv5o"]
 [ext_resource type="Texture2D" uid="uid://blrbi7bpvsoyg" path="res://BudgetMenu/bread.png" id="2_5k5h5"]
+[ext_resource type="Texture2D" uid="uid://bx2up05psfl7b" path="res://BudgetMenu/house.png" id="2_tnb7k"]
 [ext_resource type="Texture2D" uid="uid://cqr1kj2f84xr4" path="res://BudgetMenu/coin.png" id="2_yqkxs"]
+[ext_resource type="Texture2D" uid="uid://dwwcpujgl25me" path="res://BudgetMenu/car.png" id="4_k2h8h"]
+[ext_resource type="Texture2D" uid="uid://cq13e3ougvbv5" path="res://BudgetMenu/outlet.png" id="5_itkpi"]
+[ext_resource type="Texture2D" uid="uid://gkgt8yrf6pw2" path="res://BudgetMenu/leisure.png" id="6_qnjbb"]
 
 [node name="BudgetMenu" type="CanvasLayer"]
 script = ExtResource("1_1tv5o")
@@ -54,7 +58,7 @@ layout_mode = 2
 [node name="RentRect" type="TextureRect" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
-texture = ExtResource("2_yqkxs")
+texture = ExtResource("2_tnb7k")
 
 [node name="FoodRect" type="TextureRect" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -64,22 +68,17 @@ texture = ExtResource("2_5k5h5")
 [node name="TransitRect" type="TextureRect" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
-texture = ExtResource("2_yqkxs")
+texture = ExtResource("4_k2h8h")
 
 [node name="UtilitiesRect" type="TextureRect" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
-texture = ExtResource("2_yqkxs")
-
-[node name="InsuranceRect" type="TextureRect" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 6
-texture = ExtResource("2_yqkxs")
+texture = ExtResource("5_itkpi")
 
 [node name="LeisureRect" type="TextureRect" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
-texture = ExtResource("2_yqkxs")
+texture = ExtResource("6_qnjbb")
 
 [node name="SavingsRect" type="TextureRect" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -112,13 +111,6 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 text = "Utilities"
-vertical_alignment = 1
-
-[node name="Insurance" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/CategoryVBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Insurance
-"
 vertical_alignment = 1
 
 [node name="Leisure" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/CategoryVBoxContainer"]
@@ -160,13 +152,6 @@ text = "$0"
 vertical_alignment = 1
 
 [node name="UtilitiesNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_vertical = 3
-text = "$0"
-vertical_alignment = 1
-
-[node name="InsuranceNum" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/NumberVBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -216,12 +201,6 @@ layout_mode = 2
 size_flags_vertical = 3
 step = 100.0
 
-[node name="InsuranceSlider" type="HSlider" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_vertical = 3
-step = 100.0
-
 [node name="LeisureSlider" type="HSlider" parent="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
@@ -236,10 +215,13 @@ allow_lesser = true
 editable = false
 scrollable = false
 
+[node name="Button" type="Button" parent="BackgroundPanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Check"
+
 [connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/RentSlider" to="." method="_on_rent_slider_value_changed"]
 [connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/FoodSlider" to="." method="_on_food_slider_value_changed"]
 [connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/TransitSlider" to="." method="_on_transit_slider_value_changed"]
 [connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/UtilitiesSlider" to="." method="_on_utlities_slider_value_changed"]
-[connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/InsuranceSlider" to="." method="_on_insurance_slider_value_changed"]
 [connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/LeisureSlider" to="." method="_on_leisure_slider_value_changed"]
 [connection signal="value_changed" from="BackgroundPanelContainer/VBoxContainer/HorizontalBoxContainer/SliderVBoxContainer/SavingsSlider" to="." method="_on_savings_slider_value_changed"]
