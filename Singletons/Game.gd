@@ -35,7 +35,8 @@ var transit = 0
 var savings = 0
 
 var income = 0
-var happiness = 5 #happiness goes from 0 to 10
+
+var happiness = 5 #min: 0 (dead), max: 10
 var month = 1 #month goes from 1 to 12
 
 

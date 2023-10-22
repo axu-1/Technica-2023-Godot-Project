@@ -5,3 +5,9 @@ extends Resource
 @export var description: String
 @export var cost1: int
 @export var cost2: int
+
+func _init(p_title = "", p_description = "", p_cost1 = 0, p_cost2 = 0):
+	title = "Fast Food?"
+	description = "Choose to take the bus or uber for your commute"
+	cost1 = 5
+	cost2 = 50

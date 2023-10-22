@@ -1,21 +1,17 @@
-[gd_scene load_steps=10 format=3 uid="uid://dpufl0l80m4io"]
+[gd_scene load_steps=9 format=3 uid="uid://dpufl0l80m4io"]
 
 [ext_resource type="Script" path="res://BudgetMenu/budget_menu.gd" id="1_1tv5o"]
 [ext_resource type="Texture2D" uid="uid://blrbi7bpvsoyg" path="res://BudgetMenu/bread.png" id="2_5k5h5"]
-[ext_resource type="PackedScene" uid="uid://cjv2i2yg0s8l1" path="res://Menus/pop_up.tscn" id="2_847ey"]
 [ext_resource type="PackedScene" uid="uid://c3q41svgch3hy" path="res://WalkingMenu/walking.tscn" id="2_p0o7i"]
 [ext_resource type="Texture2D" uid="uid://bx2up05psfl7b" path="res://BudgetMenu/house.png" id="2_tnb7k"]
 [ext_resource type="Texture2D" uid="uid://cqr1kj2f84xr4" path="res://BudgetMenu/coin.png" id="2_yqkxs"]
-[ext_resource type="PackedScene" uid="uid://bvm0rg85m26ds" path="res://Menus/pop_up.tscn" id="3_3mn3q"]
 [ext_resource type="Texture2D" uid="uid://dwwcpujgl25me" path="res://BudgetMenu/car.png" id="4_k2h8h"]
 [ext_resource type="Texture2D" uid="uid://cq13e3ougvbv5" path="res://BudgetMenu/outlet.png" id="5_itkpi"]
 [ext_resource type="Texture2D" uid="uid://gkgt8yrf6pw2" path="res://BudgetMenu/leisure.png" id="6_qnjbb"]
 
 [node name="BudgetMenu" type="CanvasLayer"]
 script = ExtResource("1_1tv5o")
-pop_up = ExtResource("2_847ey")
 walking = ExtResource("2_p0o7i")
-pop_up = ExtResource("3_3mn3q")
 
 [node name="BackgroundPanelContainer" type="PanelContainer" parent="."]
 anchors_preset = 15
@@ -36,12 +32,10 @@ layout_mode = 2
 size_flags_vertical = 4
 
 [node name="BudgetLabel" type="Label" parent="BackgroundPanelContainer/VBoxContainer/HBoxContainer"]
-unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.2
 theme_override_font_sizes/font_size = 16
-text = "Budget"
 horizontal_alignment = 1
 vertical_alignment = 1
 
