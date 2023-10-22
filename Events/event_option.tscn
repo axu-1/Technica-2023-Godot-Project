@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://dgi1k6nvf7kyn" path="res://Events/transit.tres" id="5_psuvg"]
 [ext_resource type="Resource" uid="uid://dgrajum4hr5b1" path="res://Events/utilities.tres" id="6_qoki8"]
 
-[node name="event_option" type="Node2D"]
+[node name="event_option" type="CanvasLayer"]
 script = ExtResource("1_561w0")
 food = ExtResource("2_4d13u")
 leisure = ExtResource("3_3atp2")
@@ -16,33 +16,45 @@ transit = ExtResource("5_psuvg")
 utilities = ExtResource("6_qoki8")
 
 [node name="Title" type="Label" parent="."]
-offset_left = 144.0
-offset_top = 16.0
-offset_right = 184.0
-offset_bottom = 28.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -16.0
+offset_top = 32.0
+offset_right = 24.0
+offset_bottom = 44.0
+grow_horizontal = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Description" type="Label" parent="."]
-offset_left = 64.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -96.0
 offset_top = 48.0
-offset_right = 269.0
+offset_right = 109.0
 offset_bottom = 96.0
+grow_horizontal = 2
 horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="Option1" type="Button" parent="."]
-offset_left = 66.0
-offset_top = 141.0
-offset_right = 141.0
-offset_bottom = 172.0
+offset_left = 64.0
+offset_top = 128.0
+offset_right = 139.0
+offset_bottom = 159.0
 text = "Option 1"
 
 [node name="Option2" type="Button" parent="."]
-offset_left = 192.0
-offset_top = 141.0
-offset_right = 267.0
-offset_bottom = 172.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -144.0
+offset_top = 128.0
+offset_right = -69.0
+offset_bottom = 159.0
+grow_horizontal = 0
 text = "Option 2"
 
 [connection signal="pressed" from="Option1" to="." method="_on_option_1_pressed"]
