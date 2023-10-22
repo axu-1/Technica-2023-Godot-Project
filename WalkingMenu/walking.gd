@@ -1,4 +1,4 @@
-extends Node2D
+extends CanvasLayer
 
 @export var event_displayer : PackedScene
 @export var event_option : PackedScene

@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://BudgetMenu/budget_menu.gd" id="1_1tv5o"]
 [ext_resource type="Texture2D" uid="uid://blrbi7bpvsoyg" path="res://BudgetMenu/bread.png" id="2_5k5h5"]
-[ext_resource type="PackedScene" uid="uid://c3q41svgch3hy" path="res://WalkingMenu/walking.tscn" id="2_p0o7i"]
 [ext_resource type="Texture2D" uid="uid://bx2up05psfl7b" path="res://BudgetMenu/house.png" id="2_tnb7k"]
+[ext_resource type="PackedScene" uid="uid://d3aho76al3rat" path="res://WalkingMenu/walking.tscn" id="2_xbu8l"]
 [ext_resource type="Texture2D" uid="uid://cqr1kj2f84xr4" path="res://BudgetMenu/coin.png" id="2_yqkxs"]
 [ext_resource type="PackedScene" uid="uid://bvm0rg85m26ds" path="res://Menus/pop_up.tscn" id="3_3mn3q"]
 [ext_resource type="Texture2D" uid="uid://dwwcpujgl25me" path="res://BudgetMenu/car.png" id="4_k2h8h"]
@@ -12,7 +12,7 @@
 
 [node name="BudgetMenu" type="CanvasLayer"]
 script = ExtResource("1_1tv5o")
-walking = ExtResource("2_p0o7i")
+walking = ExtResource("2_xbu8l")
 pop_up = ExtResource("3_3mn3q")
 
 [node name="BackgroundPanelContainer" type="PanelContainer" parent="."]

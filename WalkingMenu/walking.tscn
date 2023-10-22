@@ -1,12 +1,81 @@
-[gd_scene load_steps=6 format=3 uid="uid://d3aho76al3rat"]
+[gd_scene load_steps=23 format=3 uid="uid://d3aho76al3rat"]
 
 [ext_resource type="Script" path="res://WalkingMenu/walking.gd" id="1_wfwps"]
 [ext_resource type="PackedScene" uid="uid://c5tmg7pv47da6" path="res://Events/event_displayer.tscn" id="2_lygco"]
 [ext_resource type="PackedScene" uid="uid://dw2amx6egqxes" path="res://Events/event_option.tscn" id="3_ulii0"]
 [ext_resource type="PackedScene" uid="uid://dpufl0l80m4io" path="res://BudgetMenu/budget_menu.tscn" id="4_n1bqf"]
 [ext_resource type="PackedScene" uid="uid://csfj2cre1jsir" path="res://Menus/game_over.tscn" id="5_8bt44"]
+[ext_resource type="Texture2D" uid="uid://cqfpm5r01kjh5" path="res://WalkingMenu/parallax.png" id="6_enqa0"]
+[ext_resource type="Texture2D" uid="uid://b0f72a0jt4scu" path="res://WalkingMenu/Walker/frame_00_delay-0.09s.png" id="7_3v10v"]
+[ext_resource type="Texture2D" uid="uid://xnl05bowyhwm" path="res://WalkingMenu/Walker/frame_01_delay-0.09s.png" id="8_velrx"]
+[ext_resource type="Texture2D" uid="uid://ctbk7326skpi3" path="res://WalkingMenu/Walker/frame_02_delay-0.09s.png" id="9_6yikn"]
+[ext_resource type="Texture2D" uid="uid://dfvc8tytbc8v8" path="res://WalkingMenu/Walker/frame_03_delay-0.09s.png" id="10_d0e7l"]
+[ext_resource type="Texture2D" uid="uid://c0mgbxseagwjp" path="res://WalkingMenu/Walker/frame_04_delay-0.09s.png" id="11_akpl3"]
+[ext_resource type="Texture2D" uid="uid://bwf7lagl27dgi" path="res://WalkingMenu/Walker/frame_05_delay-0.09s.png" id="12_g7a15"]
+[ext_resource type="Texture2D" uid="uid://buq5d6rx2qdey" path="res://WalkingMenu/Walker/frame_06_delay-0.09s.png" id="13_ho5fs"]
+[ext_resource type="Texture2D" uid="uid://kttqcqqv75uh" path="res://WalkingMenu/Walker/frame_07_delay-0.09s.png" id="14_hocea"]
+[ext_resource type="Texture2D" uid="uid://cf3jrolf8scpw" path="res://WalkingMenu/Walker/frame_08_delay-0.09s.png" id="15_27wvr"]
+[ext_resource type="Texture2D" uid="uid://dg8je5qxtfcd6" path="res://WalkingMenu/Walker/frame_09_delay-0.09s.png" id="16_0mr1c"]
+[ext_resource type="Texture2D" uid="uid://gbe4cusle88s" path="res://WalkingMenu/Walker/frame_10_delay-0.09s.png" id="17_xdwg8"]
+[ext_resource type="Texture2D" uid="uid://h5bf5dbug2uu" path="res://WalkingMenu/Walker/frame_11_delay-0.09s.png" id="18_4glgc"]
+[ext_resource type="Texture2D" uid="uid://b4o4qd1fargkh" path="res://WalkingMenu/Walker/frame_12_delay-0.09s.png" id="19_1w7qb"]
+[ext_resource type="Texture2D" uid="uid://bhfako7l7ihno" path="res://WalkingMenu/Walker/frame_13_delay-0.09s.png" id="20_4wnet"]
+[ext_resource type="Texture2D" uid="uid://xxthrr4b7g5r" path="res://WalkingMenu/Walker/frame_14_delay-0.09s.png" id="21_n6e2j"]
 
-[node name="walking" type="Node2D"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_vmo0g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_3v10v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_velrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6yikn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_d0e7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_akpl3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_g7a15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ho5fs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_hocea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_27wvr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_0mr1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_xdwg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_4glgc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_1w7qb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_4wnet")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_n6e2j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="walking" type="CanvasLayer"]
 script = ExtResource("1_wfwps")
 event_displayer = ExtResource("2_lygco")
 event_option = ExtResource("3_ulii0")
@@ -16,11 +85,19 @@ game_over = ExtResource("5_8bt44")
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
-[node name="Label" type="Label" parent="."]
-offset_left = 130.0
-offset_top = 118.0
-offset_right = 170.0
-offset_bottom = 126.0
-text = "walk"
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_enqa0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(46, 137)
+sprite_frames = SubResource("SpriteFrames_vmo0g")
+autoplay = "default"
+frame = 11
+frame_progress = 0.170026
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
