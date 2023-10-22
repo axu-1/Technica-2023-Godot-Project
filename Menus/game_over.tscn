@@ -1,3 +1,7 @@
+[gd_scene format=3 uid="uid://csfj2cre1jsir"]
+
+[node name="game_over" type="Node2D"]
+=======
 [gd_scene format=3 uid="uid://byvnihy7qn5vj"]
 
 [node name="game_over" type="Node2D"]

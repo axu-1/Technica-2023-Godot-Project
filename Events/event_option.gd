@@ -9,6 +9,8 @@ extends Node
 @export var transit: Resource
 @export var utilities: Resource
 
+@export var game_over : PackedScene
+
 enum event_type_enum {FOOD, TRANSIT, UTILITIES, LEISURE, AC_HEAT}
 var event_type
 var title: String
@@ -59,10 +61,12 @@ func _process(delta):
 func _on_option_1_pressed():
 	cost = cost1
 	Game.total_money -= cost1
-#	Game.emit_signal("goto_scene", walking)
+	Game.emit_signal("event_closed")
+	queue_free()
 	
 func _on_option_2_pressed():
 	cost = cost2
 	Game.total_money -= cost2
-#	Game.emit_signal("goto_scene", walking)
+	Game.emit_signal("event_closed")
+	queue_free()
 
