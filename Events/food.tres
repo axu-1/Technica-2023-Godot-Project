@@ -1,3 +1,10 @@
-[gd_resource type="Resource" format=3 uid="uid://csljas4fc0jqa"]
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://csljas4fc0jqa"]
+
+[ext_resource type="Script" path="res://Events/food.gd" id="1_1q4g0"]
 
 [resource]
+script = ExtResource("1_1q4g0")
+title = ""
+description = ""
+cost1 = 0
+cost2 = 0
