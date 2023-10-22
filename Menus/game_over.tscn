@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://csfj2cre1jsir"]
+[gd_scene load_steps=2 format=3 uid="uid://csfj2cre1jsir"]
 
-[node name="game_over" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://d17llrjy3wnkg" path="res://Menus/gameover.png" id="1_yv4t6"]
+
+[node name="game_over" type="CanvasLayer"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_yv4t6")

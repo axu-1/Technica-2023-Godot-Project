@@ -1,9 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://d3aho76al3rat"]
+[gd_scene load_steps=22 format=3 uid="uid://d3aho76al3rat"]
 
 [ext_resource type="Script" path="res://WalkingMenu/walking.gd" id="1_wfwps"]
 [ext_resource type="PackedScene" uid="uid://c5tmg7pv47da6" path="res://Events/event_displayer.tscn" id="2_lygco"]
 [ext_resource type="PackedScene" uid="uid://dw2amx6egqxes" path="res://Events/event_option.tscn" id="3_ulii0"]
-[ext_resource type="PackedScene" uid="uid://dpufl0l80m4io" path="res://BudgetMenu/budget_menu.tscn" id="4_n1bqf"]
 [ext_resource type="PackedScene" uid="uid://csfj2cre1jsir" path="res://Menus/game_over.tscn" id="5_8bt44"]
 [ext_resource type="Texture2D" uid="uid://cqfpm5r01kjh5" path="res://WalkingMenu/parallax.png" id="6_enqa0"]
 [ext_resource type="Texture2D" uid="uid://b0f72a0jt4scu" path="res://WalkingMenu/Walker/frame_00_delay-0.09s.png" id="7_3v10v"]
@@ -79,7 +78,6 @@ animations = [{
 script = ExtResource("1_wfwps")
 event_displayer = ExtResource("2_lygco")
 event_option = ExtResource("3_ulii0")
-budget_menu = ExtResource("4_n1bqf")
 game_over = ExtResource("5_8bt44")
 
 [node name="Timer" type="Timer" parent="."]

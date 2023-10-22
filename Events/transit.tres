@@ -5,6 +5,6 @@
 [resource]
 script = ExtResource("1_3bp26")
 title = "Transit"
-description = "Choose to either take the bus or an ubChoose to take the bus or uber for your commute"
+description = "Choose to either take the bus or an uber"
 cost1 = 50
 cost2 = 200

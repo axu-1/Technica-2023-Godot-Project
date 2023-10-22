@@ -45,6 +45,9 @@ func _process(delta):
 	if Game.total_money < 0:
 		Game.emit_signal("goto_scene", game_over)
 	
+	if e_index == event_order.size() - 1:
+		Game.emit_signal("goto_scene", game_over)
+	
 func _on_timer_timeout():
 	print("timer")
 #	var rand_int = randi_range(0, 10)
