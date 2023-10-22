@@ -22,5 +22,5 @@ func _process(delta):
 	$Title.set_text(title)
 	$Description.set_text(description)
 	Game.total_money -= cost
-	if Game.total_money < 0:
-		Game.emit_signal(Game.player_died)
+	#if Game.total_money < 0:
+		#Game.emit_signal(Game.player_died)

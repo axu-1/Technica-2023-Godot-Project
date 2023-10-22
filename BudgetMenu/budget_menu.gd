@@ -17,15 +17,40 @@ extends CanvasLayer
 @onready var leisure_slider = $%LeisureSlider
 @onready var savings_slider = $%SavingsSlider
 
+var budget_max : int
+#var slider_list : Array
+var slider_dict
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_stats()
 	income_num.text = "Income: $" + str(Game.income)
+#	slider_list = [rent_slider, food_slider, transit_slider, utilities_slider, insurance_slider, leisure_slider, savings_slider]
+#	slider_dict = {rent_slider: rent_slider.value, food_slider: food_slider.value, transit_slider: transit_slider.value,
+#		utilities_slider: utilities_slider.value, insurance_slider: insurance_slider.value, leisure_slider: leisure_slider.value, 
+#		savings_slider: savings_slider.value}
+	slider_dict = {rent_slider: Game.total_money, food_slider: Game.total_money, transit_slider: Game.total_money,
+		utilities_slider:Game.total_money, insurance_slider: Game.total_money, leisure_slider: Game.total_money, 
+		savings_slider: Game.total_money}
+	for slider in slider_dict:
+		slider.set_max(Game.total_money)
+
+#func _process(delta):
+#	budget_max = Game.total_money - Game.total_spent
+#	rent_slider.set_max(budget_max)
+#	food_slider.set_max(budget_max)
+#	insurance_slider.set_max(budget_max)
+#	leisure_slider.set_max(budget_max)
+#	utilities_slider.set_max(budget_max)
+#	transit_slider.set_max(budget_max)
 
 func _on_food_slider_value_changed(value):
+#	if Game.savings > 0:
+#	if value < slider_dict[food_slider]:
 	food_num.text = "$" + str(value)
 	Game.food = value
 	calculate_balances()
+#		food_slider.editable = true
 
 func _on_rent_slider_value_changed(value):
 	rent_num.text = "$" + str(value)
@@ -68,11 +93,14 @@ func set_stats():
 func calculate_balances():
 	Game.total_spent = Game.food + Game.rent + Game.insurance + Game.leisure + Game.utilities + Game.transit
 	Game.savings = Game.total_money - Game.total_spent
-	_on_savings_slider_value_changed(Game.savings)
-	rent_slider.set_max(Game.total_money)
-	food_slider.set_max(Game.total_money)
-	insurance_slider.set_max(Game.total_money)
-	leisure_slider.set_max(Game.total_money)
-	utilities_slider.set_max(Game.total_money)
-	transit_slider.set_max(Game.total_money)
+#	if Game.savings <= 0 :
+#		for slider in slider_dict:
+#			slider_dict[slider] = slider.value
+##			slider.editable = false
+#	else :
+#		for slider in slider_dict:
+#			slider_dict[slider] = Game.total_money
+#	_on_savings_slider_value_changed(Game.savings)
+	savings_slider.value = Game.savings
+#if max money, set editable to false if moving to a greater position than currently
 

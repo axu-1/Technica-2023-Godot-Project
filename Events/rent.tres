@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_8xu8v")
-title = ""
-description = ""
-cost = 0
+title = "Rent"
+description = "Knock knock! Rent for your apartment is due! You pay $200"
+cost = 200
