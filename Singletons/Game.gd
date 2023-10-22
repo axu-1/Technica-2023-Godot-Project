@@ -21,7 +21,7 @@ func _process(delta):
 
 #PLAYER VARIABLES
 enum difficulty {EASY, HARD}
-var difficulty_lvl
+var difficulty_lvl = Game.difficulty.HARD
 
 var total_money = 0
 var total_spent = 0

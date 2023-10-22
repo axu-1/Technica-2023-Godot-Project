@@ -88,7 +88,7 @@ func set_stats():
 		Game.difficulty.EASY:
 			Game.income = 10000
 		Game.difficulty.HARD:
-			Game.income = 5000
+			Game.income = 4000
 	
 	Game.total_money = Game.income
 	

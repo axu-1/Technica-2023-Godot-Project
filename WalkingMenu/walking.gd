@@ -7,6 +7,7 @@ extends CanvasLayer
 @export var game_over : PackedScene
 
 @onready var timer = $Timer
+@onready var label = $Label
 
 enum event_types {FOOD, TRANSIT, UTILITIES, LEISURE, AC_HEAT, EMERGENCY}
 var event_order = [event_types.FOOD, event_types.LEISURE, event_types.TRANSIT, event_types.UTILITIES]
@@ -22,7 +23,7 @@ func _ready():
 	var rand_int = randi_range(0, event_order.size())
 	event_done = false
 	Game.event_closed.connect(on_event_closed)
-	
+	label.set_text("Your current disposable income: $" + str(Game.total_money - Game.savings))
 #	var new_event_option = event_option.instantiate()
 #	add_child(new_event_option)
 #	new_event_option.event_type = new_event_option.event_type_enum.LEISURE
@@ -42,7 +43,7 @@ func _process(delta):
 		timer.start()
 		event_done = true
 	
-	if Game.total_money < 0:
+	if Game.total_money - Game.savings < 0:
 		Game.emit_signal("goto_scene", game_over)
 	
 	if e_index == event_order.size() - 1:
@@ -67,5 +68,6 @@ func _on_timer_timeout():
 		Game.emit_signal("on_event_closed")
 
 func on_event_closed():
+	label.set_text("Your current disposable income: $" + str(Game.total_money - Game.savings))
 	timer.start()
 

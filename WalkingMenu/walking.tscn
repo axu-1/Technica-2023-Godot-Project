@@ -98,4 +98,10 @@ autoplay = "default"
 frame = 11
 frame_progress = 0.170026
 
+[node name="Label" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 7.0
+offset_right = 48.0
+offset_bottom = 15.0
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
