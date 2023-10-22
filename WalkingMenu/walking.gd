@@ -2,8 +2,6 @@ extends Node2D
 
 @export var event_displayer : PackedScene
 @export var event_option : PackedScene
-@export var budget_menu : PackedScene
-@export var game_over : PackedScene
 
 @export var budget_menu : PackedScene
 @export var game_over : PackedScene
@@ -13,7 +11,6 @@ extends Node2D
 enum event_types {FOOD, TRANSIT, UTILITIES, LEISURE, AC_HEAT, EMERGENCY}
 var event_order = [event_types.FOOD, event_types.LEISURE, event_types.TRANSIT, event_types.UTILITIES]
 # If within summer/winter months, add AC/heat event
-
 var emergency_done = false
 var e_index = 0
 var event_done = false
@@ -33,22 +30,12 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	# Make dependent on encountering events
-#	for event in event_order:
-#		var new_event_option = event_option.instantiate()
-#		add_child(new_event_option)
-#		new_event_option.event_type = event
-#		var rand_int = randi_range(0, 10)
-#		if rand_int == 0 and !emergency_done:
-#			var emergency = event_displayer.instantiate()
-#			add_child(emergency)
-#			emergency_done = true
+#	var rand_int = randi_range(0, 10)
+#	if rand_int == 0 and !emergency_done:
+#		var emergency = event_displayer.instantiate()
+#		add_child(emergency)
+#		emergency_done = true
 		
-#	var new_event_option = event_option.instantiate()
-#	add_child(new_event_option)
-#	new_event_option.event_type = event_order[event_count]
-#	event_count += 1
-	
-
 #	Game.month += 1
 #	Game.emit_signal("goto_scene", budget_menu)
 	if !event_done:
@@ -78,3 +65,4 @@ func _on_timer_timeout():
 
 func on_event_closed():
 	timer.start()
+

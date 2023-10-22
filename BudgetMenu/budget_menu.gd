@@ -16,16 +16,12 @@ extends CanvasLayer
 @onready var leisure_slider = $%LeisureSlider
 @onready var savings_slider = $%SavingsSlider
 
-#@export var displayTime : float = 1
-#@export var text_to_string = "Invalid"
-
-@export var pop_up : PackedScene
-
 var budget_max : int
 #var slider_list : Array
 var slider_dict
 var rent = 200
-var month_dict = {1: "Jan", 2: "Feb", 3: "Mar", 4: "Apr", 5: "May", 6: "June", 7: "July", 8: "Aug", 9: "Sept", 10: "Oct", 11: "Nov", 12: "Dec"}
+var month_dict = {1: "Jan", 2: "Feb", 3: "Mar", 4: "Apr", 5: "May", 6: "June", 7: "July", 8: "Aug",
+	9: "Sept", 10: "Oct", 11: "Nov", 12: "Dec"}
 
 @export var walking : PackedScene
 @export var pop_up : PackedScene
@@ -34,7 +30,7 @@ var month_dict = {1: "Jan", 2: "Feb", 3: "Mar", 4: "Apr", 5: "May", 6: "June", 7
 func _ready():
 	set_stats()
 	month_num.text = str(month_dict[Game.month]) + " Budget"
-	income_num.text = "Income: $" + str(Game.total_money)
+	income_num.text = "Income: $" + str(Game.income)
 #	slider_list = [rent_slider, food_slider, transit_slider, utilities_slider, insurance_slider, leisure_slider, savings_slider]
 #	slider_dict = {rent_slider: rent_slider.value, food_slider: food_slider.value, transit_slider: transit_slider.value,
 #		utilities_slider: utilities_slider.value, insurance_slider: insurance_slider.value, leisure_slider: leisure_slider.value, 

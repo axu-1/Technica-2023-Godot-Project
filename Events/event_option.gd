@@ -1,8 +1,5 @@
 extends Node
 
-@export var walking : PackedScene
-@export var game_over : PackedScene
-
 @export var food: Resource
 @export var leisure: Resource
 @export var ac_heat: Resource
@@ -57,6 +54,7 @@ func _process(delta):
 	
 	$Title.set_text(title)
 	$Description.set_text(description)
+	
 
 func _on_option_1_pressed():
 	cost = cost1

@@ -29,3 +29,5 @@ func _process(delta):
 
 func _on_button_pressed():
 	queue_free()
+
+
