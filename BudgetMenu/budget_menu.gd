@@ -28,7 +28,6 @@ var rent = 200
 var month_dict = {1: "Jan", 2: "Feb", 3: "Mar", 4: "Apr", 5: "May", 6: "June", 7: "July", 8: "Aug", 9: "Sept", 10: "Oct", 11: "Nov", 12: "Dec"}
 
 @export var walking : PackedScene
-@export var pop_up : PackedScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -112,8 +111,8 @@ func calculate_balances():
 
 func _on_button_pressed():
 	if Game.savings < 0:
-		var pop = pop_up.instantiate()
-		add_child(pop)
+#		Game.emit_signal("goto_scene", pop_up)
+		pass
 	else:
 		Game.emit_signal("goto_scene", walking)
 

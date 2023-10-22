@@ -10,7 +10,7 @@ var cost: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -21,11 +21,11 @@ func _process(delta):
 	$Title.set_text(title)
 	$Description.set_text(description)
 	Game.total_money -= cost
-	#if Game.total_money < 0:
-		#Game.emit_signal(Game.player_died)
+	
 	if Game.total_money < 0:
 		Game.emit_signal("goto_scene", game_over)
-		
+
 
 func _on_button_pressed():
-	queue_free()
+	pass # Replace with function body.
+	#change screen

@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://c3q41svgch3hy" path="res://WalkingMenu/walking.tscn" id="2_p0o7i"]
 [ext_resource type="Texture2D" uid="uid://bx2up05psfl7b" path="res://BudgetMenu/house.png" id="2_tnb7k"]
 [ext_resource type="Texture2D" uid="uid://cqr1kj2f84xr4" path="res://BudgetMenu/coin.png" id="2_yqkxs"]
-[ext_resource type="PackedScene" uid="uid://bvm0rg85m26ds" path="res://Menus/pop_up.tscn" id="3_3mn3q"]
 [ext_resource type="Texture2D" uid="uid://dwwcpujgl25me" path="res://BudgetMenu/car.png" id="4_k2h8h"]
 [ext_resource type="Texture2D" uid="uid://cq13e3ougvbv5" path="res://BudgetMenu/outlet.png" id="5_itkpi"]
 [ext_resource type="Texture2D" uid="uid://gkgt8yrf6pw2" path="res://BudgetMenu/leisure.png" id="6_qnjbb"]
@@ -15,7 +14,6 @@
 script = ExtResource("1_1tv5o")
 pop_up = ExtResource("2_847ey")
 walking = ExtResource("2_p0o7i")
-pop_up = ExtResource("3_3mn3q")
 
 [node name="BackgroundPanelContainer" type="PanelContainer" parent="."]
 anchors_preset = 15

@@ -1,13 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5tmg7pv47da6"]
+[gd_scene load_steps=3 format=3 uid="uid://c5tmg7pv47da6"]
 
 [ext_resource type="Script" path="res://Events/event_displayer.gd" id="1_yt2bm"]
 [ext_resource type="Resource" uid="uid://38shyfxxhmw" path="res://Events/emergency.tres" id="2_wr8wm"]
-[ext_resource type="PackedScene" uid="uid://csfj2cre1jsir" path="res://Menus/game_over.tscn" id="3_ieb4f"]
 
 [node name="event_displayer" type="Node2D"]
 script = ExtResource("1_yt2bm")
 emergency = ExtResource("2_wr8wm")
-game_over = ExtResource("3_ieb4f")
 
 [node name="Title" type="Label" parent="."]
 offset_left = 130.0

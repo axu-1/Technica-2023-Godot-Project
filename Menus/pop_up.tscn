@@ -1,25 +1,3 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvm0rg85m26ds"]
-
-[ext_resource type="Script" path="res://Menus/pop_up.gd" id="1_3na8l"]
-
-[node name="pop_up" type="CanvasLayer"]
-script = ExtResource("1_3na8l")
-
-[node name="Label" type="Label" parent="."]
-offset_left = 16.0
-offset_top = 48.0
-offset_right = 248.0
-offset_bottom = 70.0
-text = "Invalid budget
-(savings must be at least $0)"
-horizontal_alignment = 1
-
-[node name="Button" type="Button" parent="."]
-offset_left = 88.0
-offset_top = 104.0
-offset_right = 168.0
-offset_bottom = 124.0
-=======
 [gd_scene load_steps=3 format=3 uid="uid://cjv2i2yg0s8l1"]
 
 [ext_resource type="Script" path="res://Menus/pop_up.gd" id="1_dx2i0"]
@@ -43,3 +21,6 @@ offset_left = 101.0
 offset_top = 121.0
 offset_right = 215.0
 offset_bottom = 148.0
+text = "OK"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
