@@ -1,5 +1,6 @@
 extends CanvasLayer
 
+@onready var month_num = $%BudgetLabel
 @onready var income_num = $%IncomeLabel
 @onready var rent_num = $%RentNum
 @onready var food_num = $%FoodNum
@@ -19,12 +20,16 @@ var budget_max : int
 #var slider_list : Array
 var slider_dict
 var rent = 200
+var month_dict = {1: "Jan", 2: "Feb", 3: "Mar", 4: "Apr", 5: "May", 6: "June", 7: "July", 8: "Aug",
+	9: "Sept", 10: "Oct", 11: "Nov", 12: "Dec"}
 
 @export var walking : PackedScene
+@export var pop_up : PackedScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_stats()
+	month_num.text = str(month_dict[Game.month]) + " Budget"
 	income_num.text = "Income: $" + str(Game.income)
 #	slider_list = [rent_slider, food_slider, transit_slider, utilities_slider, insurance_slider, leisure_slider, savings_slider]
 #	slider_dict = {rent_slider: rent_slider.value, food_slider: food_slider.value, transit_slider: transit_slider.value,
@@ -37,6 +42,10 @@ func _ready():
 		slider.set_max(Game.total_money)
 	rent_slider.value = rent
 	rent_num.text = "$" + str(rent)
+	Game.rent = rent
+	Game.savings = Game.total_money - rent
+	savings_slider.value = Game.savings
+	savings_num.text = "$" + str(Game.savings)
 
 #func _process(delta):
 #	budget_max = Game.total_money - Game.total_spent
@@ -99,7 +108,8 @@ func calculate_balances():
 
 func _on_button_pressed():
 	if Game.savings < 0:
-		pass #clickable popup
+		var pop = pop_up.instantiate()
+		add_child(pop)
 	else:
 		Game.emit_signal("goto_scene", walking)
 

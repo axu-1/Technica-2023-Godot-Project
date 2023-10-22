@@ -41,3 +41,6 @@ offset_top = 141.0
 offset_right = 267.0
 offset_bottom = 172.0
 text = "Option 2"
+
+[connection signal="pressed" from="Option1" to="." method="_on_option_1_pressed"]
+[connection signal="pressed" from="Option2" to="." method="_on_option_2_pressed"]
