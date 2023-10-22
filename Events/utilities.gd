@@ -7,7 +7,7 @@ extends Resource
 @export var cost2: int
 
 func _init(p_title = "", p_description = "", p_cost1 = 0, p_cost2 = 0):
-		title = "Fast Food?"
+		title = "Where's My WiFi?"
 		description = "Which internet option do you prefer? (low vs high speed)"
 		cost1 = 55
 		cost2 = 100
