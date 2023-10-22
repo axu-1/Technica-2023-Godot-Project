@@ -1,8 +1,7 @@
 extends Node
 
-@export var rent: Resource
+@export var emergency: Resource
 
-enum event_type_enum {RENT, FOOD, TRANSIT, UTILITIES, INSURANCE, LEISURE, SAVINGS}
 var event_type
 var title: String
 var description: String
@@ -14,10 +13,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if event_type == event_type_enum.RENT:
-		title = rent.title
-		description = rent.description
-		cost = rent.cost
+	var rand_int = randi_range(0, 10)
+	if rand_int == 0:
+		title = emergency.title
+		description = emergency.description
+		cost = emergency.cost
 		
 	$Title.set_text(title)
 	$Description.set_text(description)

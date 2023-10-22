@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://b8ieixxxifmv"]
+
+[ext_resource type="Script" path="res://Events/ac_heat.gd" id="1_ct3b7"]
+
+[resource]
+script = ExtResource("1_ct3b7")
+title = "Utilities"
+description = "It's summer/winter and you are hot/cold. Do you want to invest in some AC/heat? (Yes/No)"
+cost1 = 0
+cost2 = 50

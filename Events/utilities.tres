@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dgrajum4hr5b1"]
+
+[ext_resource type="Script" path="res://Events/utilities.gd" id="1_pge8i"]
+
+[resource]
+script = ExtResource("1_pge8i")
+title = "Utilities"
+description = "Which internet option do you prefer? (low vs high speed)"
+cost1 = 30
+cost2 = 50

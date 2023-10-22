@@ -1,11 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://dw2amx6egqxes"]
+[gd_scene load_steps=7 format=3 uid="uid://dw2amx6egqxes"]
 
 [ext_resource type="Script" path="res://Events/event_option.gd" id="1_561w0"]
 [ext_resource type="Resource" uid="uid://csljas4fc0jqa" path="res://Events/food.tres" id="2_4d13u"]
+[ext_resource type="Resource" uid="uid://dxltbmn11y767" path="res://Events/leisure.tres" id="3_3atp2"]
+[ext_resource type="Resource" uid="uid://b8ieixxxifmv" path="res://Events/ac_heat.tres" id="4_nvpxt"]
+[ext_resource type="Resource" uid="uid://dgi1k6nvf7kyn" path="res://Events/transit.tres" id="5_psuvg"]
+[ext_resource type="Resource" uid="uid://dgrajum4hr5b1" path="res://Events/utilities.tres" id="6_qoki8"]
 
 [node name="event_option" type="Node2D"]
 script = ExtResource("1_561w0")
 food = ExtResource("2_4d13u")
+leisure = ExtResource("3_3atp2")
+ac_heat = ExtResource("4_nvpxt")
+transit = ExtResource("5_psuvg")
+utilities = ExtResource("6_qoki8")
 
 [node name="Title" type="Label" parent="."]
 offset_left = 127.0

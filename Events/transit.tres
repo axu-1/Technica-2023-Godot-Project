@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dgi1k6nvf7kyn"]
+
+[ext_resource type="Script" path="res://Events/transit.gd" id="1_3bp26"]
+
+[resource]
+script = ExtResource("1_3bp26")
+title = "Transit"
+description = "Choose to either take the bus or an ubChoose to take the bus or uber for your commute"
+cost1 = 50
+cost2 = 200
