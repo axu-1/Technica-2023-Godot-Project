@@ -10,6 +10,8 @@ signal next_scene_triggered
 
 signal game_over
 
+signal event_closed
+
 var seconds_decimal = 1.0
 
 func _process(delta):

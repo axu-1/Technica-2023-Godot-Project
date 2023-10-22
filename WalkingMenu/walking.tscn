@@ -1,13 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3q41svgch3hy"]
+[gd_scene load_steps=6 format=3 uid="uid://c3q41svgch3hy"]
 
 [ext_resource type="Script" path="res://WalkingMenu/walking.gd" id="1_wfwps"]
 [ext_resource type="PackedScene" uid="uid://c5tmg7pv47da6" path="res://Events/event_displayer.tscn" id="2_lygco"]
 [ext_resource type="PackedScene" uid="uid://dw2amx6egqxes" path="res://Events/event_option.tscn" id="3_ulii0"]
+[ext_resource type="PackedScene" uid="uid://dpufl0l80m4io" path="res://BudgetMenu/budget_menu.tscn" id="4_xlya6"]
+[ext_resource type="PackedScene" uid="uid://csfj2cre1jsir" path="res://Menus/game_over.tscn" id="5_bgd6e"]
 
 [node name="WalkingMenu" type="Node2D"]
 script = ExtResource("1_wfwps")
 event_displayer = ExtResource("2_lygco")
 event_option = ExtResource("3_ulii0")
+budget_menu = ExtResource("4_xlya6")
+game_over = ExtResource("5_bgd6e")
 
 [node name="Background" type="AnimatedSprite2D" parent="."]
 
@@ -19,3 +23,8 @@ offset_top = 66.0
 offset_right = 184.0
 offset_bottom = 74.0
 text = "Walking"
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
